@@ -1,5 +1,8 @@
 $(function() {
 
+
+
+
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
@@ -71,3 +74,86 @@ $(function() {
 $('#name').focus(function() {
     $('#success').html('');
 });
+
+
+
+         $(window).scroll(function() {
+        var hT = $('#techstack').offset().top,
+        hH = $('#techstack').outerHeight(),
+        wS = $(this).scrollTop();
+        $('.stackleft').hide();
+        $('.stackright').hide();
+        // console.log("current"+hT + " "+ hH+" "+ wH+" "+wS);
+        if(wS >(hT-hH)){
+
+        $('#techstack .stackleft').each(function(index){
+            var _this = this;
+            $(_this).show();
+            setInterval( function(){ $(_this).addClass("animated slideInLeft"); }, 1*index );
+            
+    });
+
+         $('#techstack .stackright').each(function(index){
+            var _this = this;
+            $(_this).show();
+            setInterval( function(){ $(_this).addClass("animated slideInRight"); }, 1*index );
+            
+    });
+
+        }
+    });
+
+function  typewriter(callback){
+    $('div.intro-text').addClass('typewriter');
+    return true;
+}
+
+
+function fadeInEffect(){
+
+ $('#skills').html('Web Applications - |Graphic Designs - |User Experience Design');
+//    alert($el);
+    // alert("");
+var $el = $("#skills"), text = $el.text(),
+    words = text.split("|");
+
+var html = "";
+for (var i = 0; i < words.length; i++) {
+    html += "<span>" + words[i] + " </span>";
+};
+$el.html(html).children().hide().each(function(i){
+  $(this).delay(i*700).fadeIn(2000);
+});
+
+}
+
+
+$.when( typewriter() ).done( function() {
+   setTimeout(function(){
+    fadeInEffect();
+   }, 4000)
+   
+} );
+
+// typewriter();
+
+
+
+
+
+
+
+
+
+//     $('#techstack .stackright')
+    //     .each(function(index){
+    //         var _this = this;
+    //         $('.stackright').show();
+    //         setTimeout( function(){ $(_this).addClass("animated slideInRight"); }, 1000*index );
+    // });
+
+            // console.log(">>>>>>>"+hT + " "+ hH+" "+ wH+" "+wS);
+            // $('#stack').show();
+            // // $('#angularjs').show();
+            // $('#stack').addClass("animated slideInLeft");
+            // $('#angularjs').addClass("animated slideInRight");

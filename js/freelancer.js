@@ -30,6 +30,16 @@
         }
     })
 
+
+
+    // $('#java').hover(function(){
+    //         $('.para').addClass("javafont");
+    // )}
+
+
+// $('#java').addClasses("animated", "slideInLeft");
+
+
     // Floating label headings for the contact form
     $(function() {
         $("body").on("input propertychange", ".floating-label-form-group", function(e) {

@@ -9,6 +9,7 @@ body {
 }
 p {
   font-size: 20px;
+  text-align: justify;
 }
 p.small {
   font-size: 16px;
@@ -79,9 +80,10 @@ header img {
   display: block;
   margin: 0 auto 20px;
 }
-.img-responsive:{
+
+/*.img-responsive{
 zoom: 10%;
-}
+}*/
 
 /*#maincontent .img-responsive:hover {
   max-width: 100%;
@@ -105,11 +107,11 @@ header .intro-text .name {
   font-size: 2em;
   color: black;
 }
-header .intro-text .skills {
+header .intro-text .skills , div .skills {
   font-size: 1.25em;
   font-weight: 700;
   color: black;
-  font-family: Helvetica, sans-serif
+  font-family: Lato;
 }
 
 /*For responsive screen */
@@ -123,7 +125,7 @@ header .intro-text .skills {
     font-size: 4.75em;
   }
   header .intro-text .skills {
-    font-size: 1.75em;
+    font-size: 1.9em;
   }
 }
 .navbar-custom {
@@ -222,7 +224,7 @@ section.success {
   background: black;
 }
 #portfolio .portfolio-item {
-  margin: 0 0 15px;
+  margin: 0px 0 15px;
   right: 0;
 }
 #portfolio .portfolio-item .portfolio-link {
@@ -270,11 +272,20 @@ section.success {
   color: black;
 }
 
+#testimonial  {
+  background: white;
+  color: black;
+}
+
 #contact{
   background: black;
   color: white;
 }
 
+#techstack{
+  background: black;
+  color: white;
+}
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
@@ -366,7 +377,8 @@ footer .footer-below-text {
 }
 .btn-outline:hover,
 .btn-outline:focus,
-.btn-outline:active, {
+.btn-outline:active,
+.btn-outline.active {
   color: #18BC9C;
   background: white;
   border: solid 2px white;
@@ -514,7 +526,7 @@ fieldset[disabled] .btn-success.active {
 }
 .portfolio-modal .close-modal .lr {
   height: 75px;
-  width: 1px;
+  width: 2px;
   margin-left: 35px;
   background-color: #2C3E50;
   transform: rotate(45deg);
@@ -526,7 +538,7 @@ fieldset[disabled] .btn-success.active {
 }
 .portfolio-modal .close-modal .lr .rl {
   height: 75px;
-  width: 1px;
+  width: 2px;
   background-color: #2C3E50;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -586,4 +598,45 @@ div#maincontent {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
+}
+
+.techstackrow {
+  margin: 0 auto;
+  align-content: center;
+}
+.offset{
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+.javafont{
+font-size: 40px;
+}
+
+.stackleft, .stackright{
+text-align: left;
+}
+/*img {
+   margin: 0 10px;
+}*/
+p.stackleft, p.stackright {
+font-size: 20px;
+font-family: Montserrat;
+}
+
+.carousel-control.right {
+    /*right: 0;*/
+    /*left: auto;*/
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.00001) 100%);
+}
+
+.carousel-inner h3{
+ font-family: 'Open Sans', sans-serif;
+ font-style: italic;
+  font-weight: 100;
+  font-size: 25px;
+  color: #3f4652
+}
+.jumbotron{
+      background-color: rgba(238, 238, 238, 0.28);
 }
