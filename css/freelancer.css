@@ -137,7 +137,7 @@ header .intro-text .skills , div .skills {
   }
 
 #portfolioModal1 .img-responsive {
-   max-width: 70%;
+   max-width: 80%;
  }
 }
 
@@ -692,4 +692,10 @@ div.modal-body.jumbotron{
 
 .image-fit{
   width: 100%;
+}
+
+#portfolioModal1 .problem-statement-list, #portfolioModal2 .problem-statement-list{
+width: 100%;
+text-align: left;
+font-size: 18px;
 }
