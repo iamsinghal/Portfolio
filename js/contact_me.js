@@ -12,7 +12,7 @@ $(function() {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
             event.preventDefault();
-            
+
             // get values from FORM
             var name = $("input#name").val();
             var email = $("input#email").val();
@@ -77,63 +77,64 @@ $('#name').focus(function() {
 
 
 
-         $(window).scroll(function() {
-        var hT = $('#techstack').offset().top,
+$(window).scroll(function() {
+    var hT = $('#techstack').offset().top,
         hH = $('#techstack').outerHeight(),
         wS = $(this).scrollTop();
-        $('.stackleft').hide();
-        $('.stackright').hide();
-        // console.log("current"+hT + " "+ hH+" "+ wH+" "+wS);
-        if(wS >(hT-hH)){
+    $('.stackleft').hide();
+    $('.stackright').hide();
+    // console.log("current"+hT + " "+ hH+" "+ wH+" "+wS);
+    if (wS > (hT - hH)) {
 
-        $('#techstack .stackleft').each(function(index){
+        $('#techstack .stackleft').each(function(index) {
             var _this = this;
             $(_this).show();
-            setInterval( function(){ $(_this).addClass("animated slideInLeft"); }, 1*index );
-            
-    });
+            setInterval(function() { $(_this).addClass("animated slideInLeft"); }, 1 * index);
 
-         $('#techstack .stackright').each(function(index){
+        });
+
+        $('#techstack .stackright').each(function(index) {
             var _this = this;
             $(_this).show();
-            setInterval( function(){ $(_this).addClass("animated slideInRight"); }, 1*index );
-            
-    });
+            setInterval(function() { $(_this).addClass("animated slideInRight"); }, 1 * index);
 
-        }
-    });
+        });
 
-function  typewriter(callback){
+    }
+});
+
+function typewriter(callback) {
     $('div.intro-text').addClass('typewriter');
     return true;
 }
 
 
-function fadeInEffect(){
+function fadeInEffect() {
 
- $('#skills').html('Web Applications - |Graphic Designs - |User Experience Design');
-//    alert($el);
+    $('#skills').html('Web Applications - |Graphic Designs - |User Experience Design');
+    //    alert($el);
     // alert("");
-var $el = $("#skills"), text = $el.text(),
-    words = text.split("|");
+    var $el = $("#skills"),
+        text = $el.text(),
+        words = text.split("|");
 
-var html = "";
-for (var i = 0; i < words.length; i++) {
-    html += "<span>" + words[i] + " </span>";
-};
-$el.html(html).children().hide().each(function(i){
-  $(this).delay(i*700).fadeIn(2000);
-});
+    var html = "";
+    for (var i = 0; i < words.length; i++) {
+        html += "<span>" + words[i] + " </span>";
+    };
+    $el.html(html).children().hide().each(function(i) {
+        $(this).delay(i * 700).fadeIn(4000);
+    });
 
 }
 
 
-$.when( typewriter() ).done( function() {
-   setTimeout(function(){
-    fadeInEffect();
-   }, 4000)
-   
-} );
+$.when(typewriter()).done(function() {
+    setTimeout(function() {
+        fadeInEffect();
+    }, 4000)
+
+});
 
 // typewriter();
 
@@ -146,14 +147,14 @@ $.when( typewriter() ).done( function() {
 
 
 //     $('#techstack .stackright')
-    //     .each(function(index){
-    //         var _this = this;
-    //         $('.stackright').show();
-    //         setTimeout( function(){ $(_this).addClass("animated slideInRight"); }, 1000*index );
-    // });
+//     .each(function(index){
+//         var _this = this;
+//         $('.stackright').show();
+//         setTimeout( function(){ $(_this).addClass("animated slideInRight"); }, 1000*index );
+// });
 
-            // console.log(">>>>>>>"+hT + " "+ hH+" "+ wH+" "+wS);
-            // $('#stack').show();
-            // // $('#angularjs').show();
-            // $('#stack').addClass("animated slideInLeft");
-            // $('#angularjs').addClass("animated slideInRight");
+// console.log(">>>>>>>"+hT + " "+ hH+" "+ wH+" "+wS);
+// $('#stack').show();
+// // $('#angularjs').show();
+// $('#stack').addClass("animated slideInLeft");
+// $('#angularjs').addClass("animated slideInRight");
