@@ -1,3 +1,3 @@
-# [Personal Portfolio](http://IamSinghal.com/)]
+# [Personal Portfolio](http://IamSinghal.com/)
 
 - Developed using bootstrap
